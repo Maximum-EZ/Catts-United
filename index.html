@@ -1,114 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Training Times</title>
-    <link rel="icon" href="https://tr.rbxcdn.com/48cfc0ade83c7be5bb96d2d7c02e7af8/150/150/Image/Png" type="image/x-icon">
-    <style>
-        body {
-            background-color: #1c1c1c;
-            color: white;
-            font-size: 2em;
-            text-align: center;
-        }
+	<title>Training Times</title>
+	<link rel="icon" href="https://tr.rbxcdn.com/48cfc0ade83c7be5bb96d2d7c02e7af8/150/150/Image/Png" type="image/x-icon">
+	<style>
+		body {
+			background-color: #1c1c1c;
+			color: white;
+			font-size: 2em;
+			text-align: center;
+		}
 
-        h1 {
-            margin-top: 50px;
-            font-size: 3em;
-        }
+		h1 {
+			margin-top: 50px;
+			font-size: 3em;
+		}
 
-        .schedule {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-gap: 39px;
-            margin-top: 50px;
-            padding: 50px 0;
-            font-size: 1.5em;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-        }
+		.schedule {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			grid-gap: 39px;
+			margin-top: 50px;
+			padding: 50px 0;
+			font-size: 1.5em;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+		}
 
-        .schedule div {
-            padding: 20px;
-            background-color: #2f2f2f;
-            border-radius: 10px;
-            opacity: 0;
-            transform: translateY(-100%);
-            animation: swing-in 1s ease-in-out;
-            animation-fill-mode: forwards;
-        }
+		.schedule div {
+			padding: 20px;
+			background-color: #2f2f2f;
+			border-radius: 10px;
+			opacity: 0;
+			transform: translateY(-100%);
+			animation: swing-in 1s ease-in-out;
+			animation-fill-mode: forwards;
+		}
 
-        .schedule div:nth-child(1) {
-            animation-delay: 0s;
-        }
+		.schedule div:nth-child(1) {
+			animation-delay: 0s;
+		}
 
-        .schedule div:nth-child(2) {
-            animation-delay: 0.2s;
-        }
+		.schedule div:nth-child(2) {
+			animation-delay: 0.2s;
+		}
 
-        .schedule div:nth-child(3) {
-            animation-delay: 0.4s;
-        }
+		.schedule div:nth-child(3) {
+			animation-delay: 0.4s;
+		}
 
-        .schedule div:nth-child(4) {
-            animation-delay: 0.6s;
-        }
+		.schedule div:nth-child(4) {
+			animation-delay: 0.6s;
+		}
 
-        .schedule div:nth-child(5) {
-            animation-delay: 0.8s;
-        }
+		.schedule div:nth-child(5) {
+			animation-delay: 0.8s;
+		}
 
-        .schedule div:nth-child(6) {
-            animation-delay: 1s;
-        }
+		.schedule div:nth-child(6) {
+			animation-delay: 1s;
+		}
 
-        .schedule div:nth-child(7) {
-            animation-delay: 1.2s;
-        }
+		.schedule div:nth-child(7) {
+			animation-delay: 1.2s;
+		}
 
-        @keyframes swing-in {
-            0% {
-                opacity: 0;
-                transform: translateY(-100%);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0%);
-            }
-        }
-    </style>
+		@keyframes swing-in {
+			0% {
+				opacity: 0;
+				transform: translateY(-100%);
+			}
+			100% {
+				opacity: 1;
+				transform: translateY(0%);
+			}
+		}
+	</style>
 </head>
 <body>
-    <h1>Training Times</h1>
-    <div class="schedule">
-        <div>
-            6 AM EST<br>Weekends Only
-        </div>
-        <div>
-            10 AM EST
-        </div>
-        <div>
-            12 PM EST
-        </div>
-        <div>
-            4 PM EST
-        </div>
-        <div>
-            7 PM EST
-        </div>
-        <div>
-            9 PM EST
-        </div>
-        <div>
-            11 PM EST
-        </div>
-    </div>
-
-    <script>
-        // get all the divs that contain the time
-        const timeDivs = document.querySelectorAll('.schedule div');
-
-        // loop through each time div and update the time to the user's local time
-        timeDivs.forEach((div) => {
-            const estTime = div.innerText.trim().split(' ')[0]; // get the EST time
-            const localTime = new Date().toLocaleString('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: 'numeric', hour12: true }); // get the user's local time
+	<h1>Training Times</h1>
+	<div class="schedule">
+		<div>
+			6 AM EST<br>Weekends Only
+		</div>
+		<div>
+			10 AM EST
+		</div>
+		<div>
+			12 PM EST
+		</div>
+		<div>
+			4 PM EST
+		</div>
+		<div>
+			7 PM EST
+		</div>
+		<div>
+			9 PM EST
+		</div>
+		<div>
+			11 PM EST
+		</div>
+	</div>
+</body>
+</html>
