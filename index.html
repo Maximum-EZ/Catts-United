@@ -81,32 +81,34 @@
 <body>
 	<h1>Training Times</h1>
 	<div class="schedule">
-		<div id="time1">
-			6 AM
+		<div class="time">
+			6 AM EST<br>Weekends Only
 		</div>
-		<div id="time2">
-			10 AM
+		<div class="time">
+			10 AM EST
 		</div>
-		<div id="time3">
-			12 PM
+		<div class="time">
+			12 PM EST
 		</div>
-		<div id="time4">
-			4 PM
+		<div class="time">
+			4 PM EST
 		</div>
-		<div id="time5">
-			7 PM
+		<div class="time">
+			7 PM EST
 		</div>
-		<div id="time6">
-			9 PM
+		<div class="time">
+			9 PM EST
 		</div>
-		<div id="time7">
-			11 PM
+		<div class="time">
+			11 PM EST
 		</div>
 	</div>
 	<script>
-		// Get the user's timezone offset in minutes
-		var offsetMinutes = new Date().getTimezoneOffset();
-		
-		// Convert the offset to hours and adjust the displayed times accordingly
-		document.getElementById("time1").innerHTML = formatTime(6 - offsetMinutes / 60) + " AM";
-		document
+		// get all the time elements
+		const times = document.querySelectorAll('.time');
+
+		// loop through the time elements and update their content
+		times.forEach(time => {
+			const dateString = time.textContent.replace(' EST', '');
+			const date = new Date(dateString + ' UTC');
+			const localTime = date
