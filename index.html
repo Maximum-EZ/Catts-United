@@ -18,8 +18,9 @@
 		.schedule {
 			display: grid;
 			grid-template-columns: repeat(1, 1fr);
-			grid-gap: 20px;
+			grid-gap: 50px;
 			margin-top: 50px;
+			padding: 50px 0;
 			font-size: 1.5em;
 			text-align: center;
 			justify-content: center;
@@ -31,37 +32,37 @@
 			background-color: #2f2f2f;
 			border-radius: 10px;
 			opacity: 0;
-			transform: translateY(100%);
+			transform: translateY(-100%);
 			animation: swing-in 1s ease-in-out;
 			animation-fill-mode: forwards;
 		}
 
 		.schedule div:nth-child(1) {
-			animation-delay: 0.5s;
+			animation-delay: 0s;
 		}
 
 		.schedule div:nth-child(2) {
-			animation-delay: 1s;
+			animation-delay: 0.2s;
 		}
 
 		.schedule div:nth-child(3) {
-			animation-delay: 1.5s;
+			animation-delay: 0.4s;
 		}
 
 		.schedule div:nth-child(4) {
-			animation-delay: 2s;
+			animation-delay: 0.6s;
 		}
 
 		.schedule div:nth-child(5) {
-			animation-delay: 2.5s;
+			animation-delay: 0.8s;
 		}
 
 		.schedule div:nth-child(6) {
-			animation-delay: 3s;
+			animation-delay: 1s;
 		}
 
 		.schedule div:nth-child(7) {
-			animation-delay: 3.5s;
+			animation-delay: 1.2s;
 		}
 
 		@keyframes swing-in {
