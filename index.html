@@ -15,21 +15,46 @@
 			font-size: 3em;
 		}
 
-		p {
+		.schedule {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 20px;
 			margin-top: 50px;
 			font-size: 1.5em;
 			text-align: center;
+		}
+
+		.schedule div {
+			padding: 20px;
+			background-color: #2f2f2f;
+			border-radius: 10px;
 		}
 	</style>
 </head>
 <body>
 	<h1>Training Times</h1>
-	<p> 6 AM EST - weekends only 
-	    10 AM EST
-            12 PM EST
-            4 PM EST
-            7 PM EST
-            9 PM EST
-            11 PM EST</p>
+	<div class="schedule">
+		<div>
+			6 AM EST<br>Weekends Only
+		</div>
+		<div>
+			10 AM EST
+		</div>
+		<div>
+			12 PM EST
+		</div>
+		<div>
+			4 PM EST
+		</div>
+		<div>
+			7 PM EST
+		</div>
+		<div>
+			9 PM EST
+		</div>
+		<div>
+			11 PM ES
+		</div>
+	</div>
 </body>
 </html>
