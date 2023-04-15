@@ -1,9 +1,9 @@
 .schedule {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: none;
+    grid-auto-rows: min-content;
     grid-gap: 20px;
     margin-top: 50px;
     font-size: 1.5em;
     text-align: center;
-    grid-auto-flow: row;
 }
