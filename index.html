@@ -81,22 +81,38 @@
 <body>
 	<h1>Training Times</h1>
 	<div class="schedule">
-		<div id="weekend"></div>
-		<div id="ten-am"></div>
-		<div id="twelve-pm"></div>
-		<div id="four-pm"></div>
-		<div id="seven-pm"></div>
-		<div id="nine-pm"></div>
-		<div id="eleven-pm"></div>
+		<div>
+			6 AM EST<br>Weekends Only
+		</div>
+		<div>
+			10 AM EST
+		</div>
+		<div>
+			12 PM EST
+		</div>
+		<div>
+			4 PM EST
+		</div>
+		<div>
+			7 PM EST
+		</div>
+		<div>
+			9 PM EST
+		</div>
+		<div>
+			11 PM EST
+		</div>
 	</div>
 
 	<script>
-		const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+		// Get the user's current timezone offset in minutes
+		var offset = new Date().getTimezoneOffset();
 
-		// Set weekend time based on user's timezone
-		const weekend = new Date();
-		weekend.setUTCHours(10, 0, 0, 0);
-		const weekendOptions = { weekday: 'long', hour: 'numeric', minute: 'numeric', timeZone: timeZone };
-		document.getElementById('weekend').textContent = `6 AM ${new Intl.DateTimeFormat(undefined, weekendOptions).format(weekend)} (Weekends Only)`;
+		// Convert the offset to hours
+		var hoursOffset = offset / 60;
 
-		// Set
+		// Get the current time in the user's timezone
+		var currentTime = new Date().toLocaleString('en-US', { timeZone: 'GMT' + hoursOffset });
+
+		// Get the hour and minute of the current time
+		var currentHour = new Date(currentTime).getHours();
