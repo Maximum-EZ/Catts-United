@@ -80,39 +80,13 @@
 </head>
 <body>
 	<h1>Training Times</h1>
-	<div class="schedule">
-		<div>
-			6 AM EST<br>Weekends Only
-		</div>
-		<div>
-			10 AM EST
-		</div>
-		<div>
-			12 PM EST
-		</div>
-		<div>
-			4 PM EST
-		</div>
-		<div>
-			7 PM EST
-		</div>
-		<div>
-			9 PM EST
-		</div>
-		<div>
-			11 PM EST
-		</div>
-	</div>
-
+	<div class="schedule"></div>
 	<script>
-		// Get the user's current timezone offset in minutes
-		var offset = new Date().getTimezoneOffset();
-
-		// Convert the offset to hours
-		var hoursOffset = offset / 60;
-
-		// Get the current time in the user's timezone
-		var currentTime = new Date().toLocaleString('en-US', { timeZone: 'GMT' + hoursOffset });
-
-		// Get the hour and minute of the current time
-		var currentHour = new Date(currentTime).getHours();
+		const schedule = [
+			{ time: "6:00 AM", days: ["Sat", "Sun"] },
+			{ time: "10:00 AM", days: ["Mon", "Tue", "Wed", "Thu", "Fri"] },
+			{ time: "12:00 PM", days: ["Mon", "Tue", "Wed", "Thu", "Fri"] },
+			{ time: "4:00 PM", days: ["Mon", "Tue", "Wed", "Thu", "Fri"] },
+			{ time: "7:00 PM", days: ["Mon", "Tue", "Wed", "Thu", "Fri"] },
+			{ time: "9:00 PM", days: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] },
+			{ time: "11:00 PM", days: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
