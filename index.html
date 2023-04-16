@@ -20,15 +20,26 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			padding: 20px;
+			padding: 10px;
+			background-color: #2f2f2f;
+			border-radius: 10px;
+			z-index: 1;
+		}
+
+		nav a {
+			display: inline-block;
+			padding: 10px;
+			margin-right: 20px;
+			color: white;
 			font-size: 1.5em;
+			text-decoration: none;
 		}
 
 		.schedule {
 			display: grid;
 			grid-template-columns: repeat(1, 1fr);
 			grid-gap: 39px;
-			margin-top: 50px;
+			margin-top: 100px;
 			padding: 50px 0;
 			font-size: 1.5em;
 			text-align: center;
@@ -54,7 +65,7 @@
 			animation-delay: 0.2s;
 		}
 
-			.schedule div:nth-child(3) {
+		.schedule div:nth-child(3) {
 			animation-delay: 0.4s;
 		}
 
@@ -88,8 +99,8 @@
 </head>
 <body>
 	<nav>
-		<button>Home</button>
-		<button>Guide</button>
+		<a href="#">Home</a>
+		<a href="#">Guide</a>
 	</nav>
 	<h1>Training Times</h1>
 	<div class="schedule">
@@ -111,9 +122,4 @@
 		<div>
 			9 PM EST
 		</div>
-		<div>
-			11 PM EST
-		</div>
-	</div>
-</body>
-</html>
+		<div
